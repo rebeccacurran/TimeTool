@@ -10,6 +10,14 @@ $sql="SELECT ProjectID,ProjectName,TaskName,ProjectDate,ProjectMinutes,HomeScree
 // "WHERE USERID = @User"
 $result = mysqli_query($con,$sql);
 
+echo ' <thead>
+              <tr>
+                <th>Project ID</th>
+                <th>Project Name</th>
+                <th>Project Description</th>
+              </tr>
+            </thead>';
+            
 while($row = mysqli_fetch_array($result)) {
   echo "<tr>";
   echo "<td>" . $row['ProjectName'] . "</td>";
